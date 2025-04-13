@@ -1,21 +1,23 @@
-export const name = 'interactionCreate';
-export const once = false;
+import type { Interaction } from 'discord.js';
+import { client } from '../index.js';
 
-export async function execute(interaction: any, client: any) {
-    if (!interaction.isCommand()) return;
+export const event = {
+  name: 'interactionCreate',
+  once: false,
+  async execute(interaction: Interaction) {
+    if (!interaction.isChatInputCommand()) return;
 
     const command = client.commands.get(interaction.commandName);
     if (!command) return;
 
     try {
-        await command.execute(interaction, client);
+      await command.execute(interaction);
     } catch (error) {
-        console.error(`Error executing command: ${error.message}`);
-        if (!interaction.deferred && !interaction.replied) {
-            await interaction.reply({
-                content: '❌ There was an error while executing this command!',
-                ephemeral: true,
-            });
-        }
+      console.error('❌ Error executing command:', error);
+      await interaction.reply({
+        content: '❌ There was an error while executing this command.',
+        ephemeral: true
+      });
     }
-}
+  }
+};

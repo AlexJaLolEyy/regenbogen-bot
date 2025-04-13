@@ -1,40 +1,37 @@
 import { REST, Routes } from 'discord.js';
-import { config } from 'dotenv';
-import fs from 'fs';
+import { readdirSync } from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { config } from 'dotenv';
 
 config();
 
-const commands: any[] = [];
-const commandsPath = path.join(__dirname, '../commands');
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.ts'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const commands = [];
+const commandsPath = path.join(__dirname, '..', 'commands');
+const commandFiles = readdirSync(commandsPath).filter(file => file.endsWith('.ts'));
 
 for (const file of commandFiles) {
-    try {
-        const { data } = require(path.join(commandsPath, file));
-        if (!data) {
-            console.error(`Error: Command file "${file}" does not export a valid data object.`);
-            continue;
-        }
-        commands.push(data.toJSON());
-    } catch (error) {
-        console.error(`Error loading command file "${file}":`, error);
-    }
+  const filePath = path.join(commandsPath, file);
+  const commandModule = await import(filePath);
+  const command = commandModule.default;
+
+  if (command && command.data) {
+    commands.push(command.data.toJSON());
+  }
 }
 
-const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
+const rest = new REST().setToken(process.env.TOKEN!);
 
-(async () => {
-    try {
-        console.log('Started refreshing application (/) commands.');
-
-        await rest.put(
-            Routes.applicationCommands(process.env.CLIENT_ID),
-            { body: commands },
-        );
-
-        console.log('Successfully reloaded application (/) commands.');
-    } catch (error) {
-        console.error('Error deploying commands:', error);
-    }
-})();
+try {
+  console.log('🔁 Registering slash commands...');
+  await rest.put(
+    Routes.applicationGuildCommands(process.env.CLIENT_ID!, process.env.GUILD_ID!),
+    { body: commands }
+  );
+  console.log('✅ Slash commands registered successfully.');
+} catch (error) {
+  console.error('❌ Failed to register commands:', error);
+}

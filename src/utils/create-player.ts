@@ -1,11 +1,9 @@
 import { Player } from 'discord-player';
 import { DefaultExtractors } from '@discord-player/extractor';
+import type { Client } from 'discord.js';
 
-export async function createPlayer(client: any) {
-    const player = new Player(client);
-
-    // Load extractors (YouTube & SoundCloud by default)
-    await player.extractors.loadMulti(DefaultExtractors);
-
-    return player;
-}
+export const createPlayer = async (client: Client) => {
+  const player = new Player(client);
+  await player.extractors.load(DefaultExtractors);
+  return player;
+};
