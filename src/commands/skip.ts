@@ -1,14 +1,20 @@
 import { SlashCommandBuilder } from 'discord.js';
+import { useMainPlayer } from 'discord-player';
 
-export const data = new SlashCommandBuilder()
+export default {
+  data: new SlashCommandBuilder()
     .setName('skip')
-    .setDescription('Skip the currently playing song');
+    .setDescription('⏭️ Skip the current song'),
 
-export async function execute(interaction: any, client: any) {
-    const queue = client.player.getQueue(interaction.guild);
+  async execute(interaction) {
+    const player = useMainPlayer();
+    const queue = player.nodes.get(interaction.guildId);
 
-    if (!queue || !queue.playing) return interaction.reply('There is no music playing right now!');
+    if (!queue || !queue.node.isPlaying()) {
+      return interaction.reply({ content: '❌ Nothing to skip!', ephemeral: true });
+    }
 
-    queue.skip();
-    return interaction.reply('⏭️ Skipped the current song!');
-}
+    queue.node.skip();
+    return interaction.reply({ content: '⏭️ Skipped to the next song!', ephemeral: true });
+  }
+};

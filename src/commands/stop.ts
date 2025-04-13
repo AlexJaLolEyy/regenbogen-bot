@@ -1,14 +1,20 @@
 import { SlashCommandBuilder } from 'discord.js';
+import { useMainPlayer } from 'discord-player';
 
-export const data = new SlashCommandBuilder()
+export default {
+  data: new SlashCommandBuilder()
     .setName('stop')
-    .setDescription('Stop playback and clear the queue');
+    .setDescription('🛑 Stop playback and clear the queue'),
 
-export async function execute(interaction: any, client: any) {
-    const queue = client.player.getQueue(interaction.guild);
+  async execute(interaction) {
+    const player = useMainPlayer();
+    const queue = player.nodes.get(interaction.guildId);
 
-    if (!queue || !queue.playing) return interaction.reply('There is no music playing right now!');
+    if (!queue || !queue.node.isPlaying()) {
+      return interaction.reply({ content: '❌ Nothing is playing!', ephemeral: true });
+    }
 
-    queue.destroy();
-    return interaction.reply('⏹️ Stopped playback and cleared the queue!');
-}
+    queue.delete();
+    return interaction.reply({ content: '🛑 Stopped playback and cleared the queue.', ephemeral: true });
+  }
+};

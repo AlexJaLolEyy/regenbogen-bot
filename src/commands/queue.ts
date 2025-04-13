@@ -1,21 +1,29 @@
-import { MessageFlags, SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder } from 'discord.js';
+import { useMainPlayer } from 'discord-player';
 
-export const data = new SlashCommandBuilder()
+export default {
+  data: new SlashCommandBuilder()
     .setName('queue')
-    .setDescription('Displays the song queue');
+    .setDescription('📜 Show the current queue'),
 
-export async function execute(interaction: any, client: any) {
-    const queue = client.player.getQueue(interaction.guild);
+  async execute(interaction) {
+    const player = useMainPlayer();
+    const queue = player.nodes.get(interaction.guildId);
 
-    if (!queue || !queue.playing) {
-        return interaction.reply('There is no music playing right now!');
+    if (!queue || !queue.tracks.size) {
+      return interaction.reply({ content: '❌ The queue is empty!', ephemeral: true });
     }
 
-    const tracks = queue.tracks.map((track, i) => `${i + 1}. **${track.title}**`);
-    const currentTrack = queue.current;
+    const tracks = queue.tracks.toArray().slice(0, 10);
+    const trackList = tracks.map((track, i) => `${i + 1}. **${track.title}**`).join('\n');
 
     return interaction.reply({
-        content: `🎶 Now Playing: **${currentTrack.title}**\n\n**Queue:**\n${tracks.join('\n')}`,
-        flags: MessageFlags.Ephemeral,
+      embeds: [{
+        title: '📜 Current Queue',
+        description: trackList,
+        color: 0x00AE86,
+      }],
+      ephemeral: true
     });
-}
+  }
+};

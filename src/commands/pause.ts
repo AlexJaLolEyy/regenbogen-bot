@@ -1,14 +1,19 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
+import { useMainPlayer } from 'discord-player';
 
-export const data = new SlashCommandBuilder()
+export default {
+  data: new SlashCommandBuilder()
     .setName('pause')
-    .setDescription('Pause the currently playing song');
+    .setDescription('Pause the currently playing track'),
+  async execute(interaction: ChatInputCommandInteraction) {
+    const player = useMainPlayer();
+    const queue = player.nodes.get(interaction.guildId!);
 
-export async function execute(interaction: any, client: any) {
-    const queue = client.player.getQueue(interaction.guild);
+    if (!queue || !queue.isPlaying()) {
+      return interaction.reply({ content: '❌ No music is currently playing.', ephemeral: true });
+    }
 
-    if (!queue || !queue.playing) return interaction.reply('There is no music playing right now!');
-
-    queue.setPaused(true);
-    return interaction.reply('⏸️ Paused the song!');
-}
+    queue.node.pause();
+    interaction.reply('⏸️ Music paused.');
+  },
+};

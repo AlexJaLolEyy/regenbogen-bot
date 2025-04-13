@@ -1,14 +1,19 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
+import { useMainPlayer } from 'discord-player';
 
-export const data = new SlashCommandBuilder()
+export default {
+  data: new SlashCommandBuilder()
     .setName('resume')
-    .setDescription('Resume the currently paused song');
+    .setDescription('Resume paused music'),
+  async execute(interaction: ChatInputCommandInteraction) {
+    const player = useMainPlayer();
+    const queue = player.nodes.get(interaction.guildId!);
 
-export async function execute(interaction: any, client: any) {
-    const queue = client.player.getQueue(interaction.guild);
+    if (!queue || queue.node.isPlaying()) {
+      return interaction.reply({ content: '❌ No paused music to resume.', ephemeral: true });
+    }
 
-    if (!queue || !queue.playing) return interaction.reply('There is no music playing right now!');
-
-    queue.setPaused(false);
-    return interaction.reply('▶️ Resumed the song!');
-}
+    queue.node.resume();
+    interaction.reply('▶️ Music resumed.');
+  },
+};
