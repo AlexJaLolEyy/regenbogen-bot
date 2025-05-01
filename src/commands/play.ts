@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
 import { QueryType } from 'discord-player';
-import { player } from '../index.js';
+import { player } from '../lib/player.js';
 
 export default {
   data: new SlashCommandBuilder()
@@ -13,9 +13,13 @@ export default {
     ),
 
   async execute(interaction: ChatInputCommandInteraction) {
-    const query = interaction.options.getString('query', true);
+    console.log('🔧 /play command triggered');
 
+    const query = interaction.options.getString('query', true);
     const channel = interaction.member?.voice?.channel;
+
+    console.log(`🎧 Voice state: ${channel?.name || 'None'}`);
+
     if (!channel) {
       return interaction.reply({
         content: '🔊 You need to be in a voice channel to use this command.',
@@ -25,28 +29,55 @@ export default {
 
     await interaction.deferReply();
 
-    const searchResult = await player.search(query, {
+    let searchResult = await player.search(query, {
       requestedBy: interaction.user,
-      searchEngine: QueryType.AUTO
+      searchEngine: QueryType.YOUTUBE,
     });
 
+    console.log(`🔍 YouTube results: ${searchResult?.tracks.length || 0}`);
+
     if (!searchResult || !searchResult.tracks.length) {
+      console.log(`⚠️ YouTube failed. Retrying AUTO...`);
+
+      searchResult = await player.search(query, {
+        requestedBy: interaction.user,
+        searchEngine: QueryType.AUTO,
+      });
+
+      console.log(`🔍 AUTO results: ${searchResult?.tracks.length || 0}`);
+    }
+
+    if (!searchResult || !searchResult.tracks.length) {
+      console.log(`❌ No results for: "${query}"`);
       return interaction.editReply('❌ No results found.');
     }
 
-    const queue = await player.nodes.create(interaction.guild!, {
-      metadata: {
-        channel: interaction.channel
-      },
-      selfDeaf: true,
-      volume: 75
-    });
+    const track = searchResult.tracks[0];
+    console.log(`🎶 Found: ${track.title} | ${track.url}`);
 
-    if (!queue.connection) await queue.connect(channel);
+    try {
+      const queue = await player.nodes.create(interaction.guild!, {
+        metadata: { channel: interaction.channel },
+        selfDeaf: true,
+        volume: 75
+      });
 
-    queue.addTrack(searchResult.tracks[0]);
-    if (!queue.isPlaying()) await queue.node.play();
+      if (!queue.connection) {
+        await queue.connect(channel);
+        console.log(`🔗 Connected to VC: ${channel.name}`);
+      }
 
-    interaction.editReply(`🎶 Added **${searchResult.tracks[0].title}** to the queue.`);
+      queue.addTrack(track);
+
+      if (!queue.isPlaying()) {
+        await queue.node.play();
+        console.log(`▶️ Playing: ${track.title}`);
+      }
+
+      return interaction.editReply(`🎶 Added **${track.title}** to the queue.`);
+    } catch (err) {
+      console.error('❌ Playback error:', err);
+      return interaction.editReply('❌ Could not play the track.');
+    }
   }
 };

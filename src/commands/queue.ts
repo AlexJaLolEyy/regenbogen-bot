@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
 import { useMainPlayer } from 'discord-player';
 
 export default {
@@ -6,16 +6,20 @@ export default {
     .setName('queue')
     .setDescription('📜 Show the current queue'),
 
-  async execute(interaction) {
+  async execute(interaction: ChatInputCommandInteraction) {
     const player = useMainPlayer();
-    const queue = player.nodes.get(interaction.guildId);
+    const queue = player.nodes.get(interaction.guildId!);
 
     if (!queue || !queue.tracks.size) {
       return interaction.reply({ content: '❌ The queue is empty!', ephemeral: true });
     }
 
     const tracks = queue.tracks.toArray().slice(0, 10);
-    const trackList = tracks.map((track, i) => `${i + 1}. **${track.title}**`).join('\n');
+    let trackList = tracks.map((track, i) => `${i + 1}. **${track.title}**`).join('\n');
+
+    if (queue.tracks.size > 10) {
+      trackList += `\n...and ${queue.tracks.size - 10} more`;
+    }
 
     return interaction.reply({
       embeds: [{
