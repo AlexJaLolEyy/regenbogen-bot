@@ -6,6 +6,16 @@ import { config } from 'dotenv';
 
 config();
 
+const requiredEnvVars = ['DISCORD_TOKEN', 'CLIENT_ID', 'GUILD_ID'];
+const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
+
+if (missingEnvVars.length > 0) {
+    console.error('❌ Missing required environment variables:', missingEnvVars.join(', '));
+    process.exit(1);
+}
+
+console.log('✅ Environment variables validated');
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -13,13 +23,15 @@ const commands = [];
 const commandsPath = path.join(__dirname, '..', 'commands');
 const commandFiles = readdirSync(commandsPath).filter(file => file.endsWith('.ts'));
 
+console.log('🔍 Loading commands...');
 for (const file of commandFiles) {
   const filePath = path.join(commandsPath, file);
   try {
-    const { default: command } = await import(filePath);
+    const command = await import(filePath);
 
     if (command?.data) {
       commands.push(command.data.toJSON());
+      console.log(`✅ Loaded command: ${command.data.name}`);
     } else {
       console.warn(`⚠️ Command file "${file}" does not export a valid command.`);
     }
