@@ -1,52 +1,97 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
-import { QueryType } from 'discord-player';
-import { player } from '../index.js';
+import { SlashCommandBuilder } from '@discordjs/builders';
+import { ChatInputCommandInteraction, EmbedBuilder } from 'discord.js';
+import { useMainPlayer } from 'discord-player';
+import { isGuildLoading } from '../lib/player';
 
-export default {
-  data: new SlashCommandBuilder()
+export const data = new SlashCommandBuilder()
     .setName('play')
-    .setDescription('Plays a song from YouTube or Spotify')
+    .setDescription('Play a song')
     .addStringOption(option =>
-      option.setName('query')
-        .setDescription('Song name or URL')
-        .setRequired(true)
-    ),
+        option.setName('query')
+            .setDescription('The song to play')
+            .setRequired(true));
 
-  async execute(interaction: ChatInputCommandInteraction) {
-    const query = interaction.options.getString('query', true);
+export async function execute(interaction: ChatInputCommandInteraction) {
+    try {
+        // Defer the reply immediately to prevent timeout
+        await interaction.deferReply();
 
-    const channel = interaction.member?.voice?.channel;
-    if (!channel) {
-      return interaction.reply({
-        content: '🔊 You need to be in a voice channel to use this command.',
-        ephemeral: true
-      });
+        if (!interaction.guild) {
+            return interaction.editReply({ 
+                embeds: [
+                    new EmbedBuilder()
+                        .setColor('#FF0000')
+                        .setTitle('❌ Error')
+                        .setDescription('This command can only be used in a server!')
+                ]
+            });
+        }
+
+        const member = interaction.guild.members.cache.get(interaction.user.id);
+        if (!member?.voice.channel) {
+            return interaction.editReply({ 
+                embeds: [
+                    new EmbedBuilder()
+                        .setColor('#FF0000')
+                        .setTitle('❌ Error')
+                        .setDescription('You need to be in a voice channel to use this command!')
+                ]
+            });
+        }
+
+        // Check if the guild is in a loading state
+        if (isGuildLoading(interaction.guildId!)) {
+            return interaction.editReply({ 
+                embeds: [
+                    new EmbedBuilder()
+                        .setColor('#FFFF00')
+                        .setTitle('⏳ Please Wait')
+                        .setDescription('The player is still processing the previous request. Please try again in a few seconds.')
+                ]
+            });
+        }
+
+        const query = interaction.options.getString('query', true);
+        const player = useMainPlayer();
+
+        const { track } = await player.play(member.voice.channel, query, {
+            nodeOptions: {
+                metadata: interaction,
+                selfDeaf: true,
+                volume: 100,
+                leaveOnEnd: true,
+                leaveOnEndCooldown: 30000,
+                leaveOnStop: true,
+                leaveOnEmpty: true,
+                leaveOnEmptyCooldown: 30000
+            }
+        });
+
+        const embed = new EmbedBuilder()
+            .setColor('#00FF00')
+            .setTitle('🎵 Added to Queue')
+            .setDescription(`**${track.title}**`)
+            .setThumbnail(track.thumbnail)
+            .addFields(
+                { name: 'Duration', value: track.duration, inline: true },
+                { name: 'Requested by', value: interaction.user.toString(), inline: true }
+            )
+            .setFooter({ text: 'Enjoy your music! 🎶' });
+
+        return interaction.editReply({ embeds: [embed] });
+    } catch (error) {
+        console.error('Error in play command:', error);
+        try {
+            return interaction.editReply({ 
+                embeds: [
+                    new EmbedBuilder()
+                        .setColor('#FF0000')
+                        .setTitle('❌ Error')
+                        .setDescription('An error occurred while trying to play the track.')
+                ]
+            });
+        } catch (e) {
+            console.error('Failed to send error message:', e);
+        }
     }
-
-    await interaction.deferReply();
-
-    const searchResult = await player.search(query, {
-      requestedBy: interaction.user,
-      searchEngine: QueryType.AUTO
-    });
-
-    if (!searchResult || !searchResult.tracks.length) {
-      return interaction.editReply('❌ No results found.');
-    }
-
-    const queue = await player.nodes.create(interaction.guild!, {
-      metadata: {
-        channel: interaction.channel
-      },
-      selfDeaf: true,
-      volume: 75
-    });
-
-    if (!queue.connection) await queue.connect(channel);
-
-    queue.addTrack(searchResult.tracks[0]);
-    if (!queue.isPlaying()) await queue.node.play();
-
-    interaction.editReply(`🎶 Added **${searchResult.tracks[0].title}** to the queue.`);
-  }
-};
+}

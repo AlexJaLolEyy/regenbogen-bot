@@ -1,19 +1,39 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, EmbedBuilder } from 'discord.js';
 import { useMainPlayer } from 'discord-player';
 
-export default {
-  data: new SlashCommandBuilder()
+export const data = new SlashCommandBuilder()
     .setName('resume')
-    .setDescription('Resume paused music'),
-  async execute(interaction: ChatInputCommandInteraction) {
+    .setDescription('Resume paused music');
+
+export async function execute(interaction: ChatInputCommandInteraction) {
     const player = useMainPlayer();
     const queue = player.nodes.get(interaction.guildId!);
 
     if (!queue || queue.node.isPlaying()) {
-      return interaction.reply({ content: '❌ No paused music to resume.', ephemeral: true });
+        return interaction.reply({ 
+            embeds: [
+                new EmbedBuilder()
+                    .setColor('#FF0000')
+                    .setTitle('❌ Error')
+                    .setDescription('No paused music to resume.')
+            ],
+            ephemeral: true 
+        });
     }
 
+    const currentTrack = queue.currentTrack;
     queue.node.resume();
-    interaction.reply('▶️ Music resumed.');
-  },
-};
+
+    const embed = new EmbedBuilder()
+        .setColor('#00FF00')
+        .setTitle('▶️ Music Resumed')
+        .setDescription(`**${currentTrack?.title || 'Unknown Track'}**`)
+        .setThumbnail(currentTrack?.thumbnail || null)
+        .addFields(
+            { name: 'Duration', value: currentTrack?.duration || 'Unknown', inline: true },
+            { name: 'Requested by', value: currentTrack?.requestedBy?.toString() || 'Unknown', inline: true }
+        )
+        .setFooter({ text: 'Enjoy your music! 🎶' });
+
+    return interaction.reply({ embeds: [embed] });
+}
