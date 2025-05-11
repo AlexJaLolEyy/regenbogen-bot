@@ -1,11 +1,11 @@
 # Regenbogen Bot 🎵
 
-A feature-rich Discord bot built with Discord.js and Discord Player, designed to enhance your server's experience with music and more!
+A feature-rich Discord bot built with Discord.js and Discord Player, designed to enhance your server's experience with music, fun commands, and gaming features!
 
 ## Features
 
-### 🎵 Music Commands
-- `/play [query]` - Play a song from YouTube
+### 🎵 Music Commands (v0.1.0)
+- `/play [query]` - Play a song from YouTube or Spotify
 - `/skip` - Skip the current track
 - `/queue` - View the current music queue
 - `/pause` - Pause the current track
@@ -44,6 +44,8 @@ bun install
 DISCORD_TOKEN=your_discord_bot_token
 CLIENT_ID=your_discord_client_id
 GUILD_ID=your_discord_guild_id
+SPOTIFY_CLIENT_ID=your_spotify_client_id
+SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
 ```
 
 4. Deploy commands:
@@ -82,10 +84,38 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Discord Player](https://discord-player.js.org/) - Music player framework
 - [Discord Player YouTubei](https://github.com/Androz2091/discord-player-youtubei) - YouTube extractor
 
-## 🔮 Future Plans
+## 🔮 Version Roadmap
 
-- [ ] More music features (volume control, seek, etc.)
-- [ ] Fun commands (games, memes, etc.)
-- [ ] Utility commands (moderation, server management)
-- [ ] Customizable settings
+### v0.1.0 (Current) - Core Music Features
+- ✅ Basic music playback
+- ✅ Queue management
+- ✅ Playlist support
+- ✅ Spotify integration
+
+### v0.2.0 (Next) - General Features
+- [ ] Poll system with multiple choice options
+- [ ] Dice roll and coin flip commands
+- [ ] Comprehensive help command
+- [ ] Quiz system with ranking
+- [ ] Joke and meme commands
+
+### v0.3.0 - Enhanced Music Features
+- [ ] /vibe command for lofi/background music
+- [ ] Volume control
+- [ ] Audio effects (bass boost, nightcore, etc.)
+- [ ] Lyrics display
+- [ ] Performance improvements for long playlists
+
+### v0.4.0 - Gaming Features
+- [ ] League of Legends tracker
+- [ ] Valorant tracker
+- [ ] Path note summarizer
+- [ ] Random champion/agent selector
+- [ ] Steam/Epic Games sale notifications
+
+### Future Plans
 - [ ] Web dashboard for configuration
+- [ ] Customizable settings per server
+- [ ] More music sources
+- [ ] Advanced audio effects
+- [ ] Community features
