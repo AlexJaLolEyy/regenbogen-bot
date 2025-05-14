@@ -13,6 +13,12 @@ interface QuizState {
     timeout?: NodeJS.Timeout;
     collector?: any;
     answered: boolean;
+    questionHistory: {
+        question: string;
+        userAnswer: string;
+        correctAnswer: string;
+        isCorrect: boolean;
+    }[];
 }
 
 const activeQuizzes = new Map<string, QuizState>();
@@ -29,7 +35,13 @@ export const data = new SlashCommandBuilder()
                 { name: 'Science', value: 'science' },
                 { name: 'History', value: 'history' },
                 { name: 'Geography', value: 'geography' },
-                { name: 'Entertainment', value: 'entertainment' }
+                { name: 'Entertainment', value: 'entertainment' },
+                { name: 'Philosophy', value: 'philosophy' },
+                { name: 'Art', value: 'art' },
+                { name: 'Literature', value: 'literature' },
+                { name: 'Tech', value: 'tech' },
+                { name: 'Sports', value: 'sports' },
+                { name: 'Language', value: 'language' }
             ))
     .addStringOption(option =>
         option.setName('difficulty')
@@ -38,7 +50,8 @@ export const data = new SlashCommandBuilder()
             .addChoices(
                 { name: 'Easy', value: 'easy' },
                 { name: 'Medium', value: 'medium' },
-                { name: 'Hard', value: 'hard' }
+                { name: 'Hard', value: 'hard' },
+                { name: 'Extreme', value: 'extreme' }
             ));
 
 export async function execute(interaction: ChatInputCommandInteraction) {
@@ -81,7 +94,8 @@ export async function execute(interaction: ChatInputCommandInteraction) {
             score: 0,
             questions,
             startTime: Date.now(),
-            answered: false
+            answered: false,
+            questionHistory: []
         };
 
         // Store quiz state
@@ -163,8 +177,8 @@ async function showQuestion(interaction: ChatInputCommandInteraction, state: Qui
         state.answered = true;
 
         const customId = i.customId;
-        if (!customId || typeof customId !== 'string') return;
-        
+        if (!customId) return;
+
         const answerIndex = parseInt(customId.split('_')[1]);
         if (isNaN(answerIndex)) return;
 
@@ -172,6 +186,14 @@ async function showQuestion(interaction: ChatInputCommandInteraction, state: Qui
 
         // Update score
         if (isCorrect) state.score++;
+
+        // Add to question history
+        state.questionHistory.push({
+            question: question.question,
+            userAnswer: question.options[answerIndex],
+            correctAnswer: question.options[question.correctAnswer],
+            isCorrect
+        });
 
         // Disable all buttons
         buttons.forEach(button => button.setDisabled(true));
@@ -220,6 +242,14 @@ async function showQuestion(interaction: ChatInputCommandInteraction, state: Qui
                 timeUpEmbed.addFields({ name: 'Explanation', value: question.explanation });
             }
 
+            // Add to question history
+            state.questionHistory.push({
+                question: question.question,
+                userAnswer: "Time's up",
+                correctAnswer: question.options[question.correctAnswer],
+                isCorrect: false
+            });
+
             // Disable all buttons
             buttons.forEach(button => button.setDisabled(true));
             
@@ -266,7 +296,8 @@ async function showResults(interaction: ChatInputCommandInteraction, state: Quiz
     const category = firstQuestion.category.charAt(0).toUpperCase() + firstQuestion.category.slice(1);
     const difficulty = firstQuestion.difficulty.charAt(0).toUpperCase() + firstQuestion.difficulty.slice(1);
 
-    const embed = new EmbedBuilder()
+    // Create main results embed
+    const mainEmbed = new EmbedBuilder()
         .setColor(percentage >= 70 ? '#00FF00' : percentage >= 40 ? '#FFD700' : '#FF0000')
         .setTitle('Quiz Complete!')
         .setDescription(`You scored **${state.score}/${state.questions.length}** (${percentage}%)`)
@@ -276,8 +307,23 @@ async function showResults(interaction: ChatInputCommandInteraction, state: Quiz
             { name: 'Difficulty', value: difficulty, inline: true }
         );
 
+    // Create detailed results embed
+    const detailsEmbed = new EmbedBuilder()
+        .setColor(percentage >= 70 ? '#00FF00' : percentage >= 40 ? '#FFD700' : '#FF0000')
+        .setTitle('Question Details')
+        .setDescription('Here\'s how you did on each question:');
+
+    // Add each question to the details embed
+    state.questionHistory.forEach((q, index) => {
+        detailsEmbed.addFields({
+            name: `Question ${index + 1}`,
+            value: `**Q:** ${q.question}\n**Your Answer:** ${q.userAnswer} ${q.isCorrect ? '✅' : '❌'}\n**Correct Answer:** ${q.correctAnswer}`
+        });
+    });
+
+    // Send both embeds
     await state.message?.edit({
-        embeds: [embed],
+        embeds: [mainEmbed, detailsEmbed],
         components: []
     });
 
