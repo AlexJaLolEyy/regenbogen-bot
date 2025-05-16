@@ -1,8 +1,9 @@
-import { REST, Routes } from 'discord.js';
+import { REST, Routes, SlashCommandBuilder } from 'discord.js';
 import { readdirSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { config } from 'dotenv';
+import { Logger } from '../lib/utils/logger';
 
 config();
 
@@ -10,45 +11,57 @@ const requiredEnvVars = ['DISCORD_TOKEN', 'CLIENT_ID', 'GUILD_ID'];
 const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
 
 if (missingEnvVars.length > 0) {
-    console.error('❌ Missing required environment variables:', missingEnvVars.join(', '));
+    Logger.error('Missing required environment variables:', missingEnvVars.join(', '));
     process.exit(1);
 }
 
-console.log('✅ Environment variables validated');
+Logger.success('Environment variables validated');
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const commands = [];
+const commands: ReturnType<SlashCommandBuilder['toJSON']>[] = [];
 const commandsPath = path.join(__dirname, '..', 'commands');
-const commandFiles = readdirSync(commandsPath).filter(file => file.endsWith('.ts'));
 
-console.log('🔍 Loading commands...');
-for (const file of commandFiles) {
-  const filePath = path.join(commandsPath, file);
-  try {
-    const command = await import(filePath);
-
-    if (command?.data) {
-      commands.push(command.data.toJSON());
-      console.log(`✅ Loaded command: ${command.data.name}`);
-    } else {
-      console.warn(`⚠️ Command file "${file}" does not export a valid command.`);
+// Function to recursively load commands from directories
+async function loadCommands(dirPath: string) {
+    const items = readdirSync(dirPath, { withFileTypes: true });
+    
+    for (const item of items) {
+        const fullPath = path.join(dirPath, item.name);
+        
+        if (item.isDirectory()) {
+            // Recursively load commands from subdirectories
+            await loadCommands(fullPath);
+        } else if (item.isFile() && item.name.endsWith('.ts')) {
+            try {
+                const command = await import(fullPath);
+                
+                if (command?.data) {
+                    commands.push(command.data.toJSON());
+                    Logger.success(`Loaded command: ${command.data.name}`);
+                } else {
+                    Logger.warning(`Command file "${item.name}" does not export a valid command.`);
+                }
+            } catch (err) {
+                Logger.error(`Failed to import command "${item.name}":`, err);
+            }
+        }
     }
-  } catch (err) {
-    console.error(`❌ Failed to import command "${file}":`, err);
-  }
 }
+
+Logger.info('Loading commands...');
+await loadCommands(commandsPath);
 
 const rest = new REST().setToken(process.env.DISCORD_TOKEN!);
 
 try {
-  console.log('🔁 Registering slash commands...');
-  await rest.put(
-    Routes.applicationGuildCommands(process.env.CLIENT_ID!, process.env.GUILD_ID!),
-    { body: commands }
-  );
-  console.log('✅ Slash commands registered successfully.');
+    Logger.info('Registering slash commands...');
+    await rest.put(
+        Routes.applicationGuildCommands(process.env.CLIENT_ID!, process.env.GUILD_ID!),
+        { body: commands }
+    );
+    Logger.success('Slash commands registered successfully.');
 } catch (error) {
-  console.error('❌ Failed to register commands:', error);
+    Logger.error('Failed to register commands:', error);
 }

@@ -1,13 +1,12 @@
 import { Client } from 'discord.js';
-import { player } from '../lib/player';
+import { Logger } from '../lib/utils/logger';
 
 export const event = {
     name: 'ready',
     once: true,
     async execute(client: Client) {
-        console.log(`✅ Logged in as ${client.user?.tag}`);
-        console.log(`🏰 Connected to ${client.guilds.cache.size} guilds`);
-        console.log(`🎵 Player initialized with ${player.extractors.store.size} extractors`);
+        Logger.success(`Logged in as ${client.user?.tag}`);
+        Logger.info(`Connected to ${client.guilds.cache.size} guilds`);
     }
 };
   

@@ -1,0 +1,514 @@
+{
+    "jokes": [
+        {
+            "setup": "Why don't scientists trust atoms?",
+            "punchline": "Because they make up everything!",
+            "category": "general"
+        },
+        {
+            "setup": "Why did the scarecrow win an award?",
+            "punchline": "Because he was outstanding in his field!",
+            "category": "general"
+        },
+        {
+            "setup": "What do you call a fake noodle?",
+            "punchline": "An impasta!",
+            "category": "dad"
+        },
+        {
+            "setup": "Why did the programmer quit their job?",
+            "punchline": "Because they didn't get arrays!",
+            "category": "programming"
+        },
+        {
+            "setup": "Knock knock",
+            "punchline": "Who's there?",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "What do you call cheese that isn't yours?",
+            "punchline": "Nacho cheese!",
+            "category": "general"
+        },
+        {
+            "setup": "Why don’t skeletons fight each other?",
+            "punchline": "They don’t have the guts.",
+            "category": "general"
+        },
+        {
+            "setup": "How do you organize a space party?",
+            "punchline": "You planet!",
+            "category": "general"
+        },
+        {
+            "setup": "What did the ocean say to the beach?",
+            "punchline": "Nothing, it just waved.",
+            "category": "general"
+        },
+        {
+            "setup": "Why can't your nose be 12 inches long?",
+            "punchline": "Because then it would be a foot.",
+            "category": "general"
+        },
+        {
+            "setup": "I'm reading a book on anti-gravity.",
+            "punchline": "It's impossible to put down!",
+            "category": "dad"
+        },
+        {
+            "setup": "Did you hear about the restaurant on the moon?",
+            "punchline": "Great food, no atmosphere.",
+            "category": "dad"
+        },
+        {
+            "setup": "I would avoid the sushi if I was you.",
+            "punchline": "It’s a little fishy.",
+            "category": "dad"
+        },
+        {
+            "setup": "I only know 25 letters of the alphabet.",
+            "punchline": "I don't know y.",
+            "category": "dad"
+        },
+        {
+            "setup": "What do you call a factory that makes good products?",
+            "punchline": "A satisfactory.",
+            "category": "dad"
+        },
+        {
+            "setup": "Why do programmers prefer dark mode?",
+            "punchline": "Because light attracts bugs.",
+            "category": "programming"
+        },
+        {
+            "setup": "What’s a programmer’s favorite hangout place?",
+            "punchline": "The Foo Bar.",
+            "category": "programming"
+        },
+        {
+            "setup": "Why do Java developers wear glasses?",
+            "punchline": "Because they don’t C#.",
+            "category": "programming"
+        },
+        {
+            "setup": "How many programmers does it take to change a light bulb?",
+            "punchline": "None. That’s a hardware problem.",
+            "category": "programming"
+        },
+        {
+            "setup": "What do you call a group of 8 Hobbits?",
+            "punchline": "A hobbyte.",
+            "category": "programming"
+        },
+        {
+            "setup": "Knock knock.",
+            "punchline": "Who’s there? Lettuce. Lettuce who? Lettuce in, it’s cold out here!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Knock knock.",
+            "punchline": "Who’s there? Boo. Boo who? Don’t cry, it’s just a joke!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Knock knock.",
+            "punchline": "Who’s there? Tank. Tank who? You’re welcome.",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Knock knock.",
+            "punchline": "Who’s there? Cow says. Cow says who? Cow says moooo!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Knock knock.",
+            "punchline": "Who’s there? Nobel. Nobel who? No bell, that’s why I’m knocking!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Why was the math book sad?",
+            "punchline": "It had too many problems.",
+            "category": "math"
+        },
+        {
+            "setup": "Why is six afraid of seven?",
+            "punchline": "Because seven eight nine.",
+            "category": "math"
+        },
+        {
+            "setup": "What’s the best tool to do math?",
+            "punchline": "Multi-pliers!",
+            "category": "math"
+        },
+        {
+            "setup": "Why did the student do multiplication problems on the floor?",
+            "punchline": "The teacher told him not to use tables.",
+            "category": "math"
+        },
+        {
+            "setup": "What did the zero say to the eight?",
+            "punchline": "Nice belt!",
+            "category": "math"
+        },
+        {
+            "setup": "Why don’t elephants use computers?",
+            "punchline": "They're afraid of the mouse.",
+            "category": "animal"
+        },
+        {
+            "setup": "What do you call a bear with no teeth?",
+            "punchline": "A gummy bear!",
+            "category": "animal"
+        },
+        {
+            "setup": "Why did the dog sit in the shade?",
+            "punchline": "Because he didn’t want to be a hot dog!",
+            "category": "animal"
+        },
+        {
+            "setup": "Why did the cow go to space?",
+            "punchline": "To see the moooon!",
+            "category": "animal"
+        },
+        {
+            "setup": "Why don't seagulls fly over the bay?",
+            "punchline": "Because then they’d be bagels.",
+            "category": "animal"
+        },
+        {
+            "setup": "I used to be a banker...",
+            "punchline": "But I lost interest.",
+            "category": "puns"
+        },
+        {
+            "setup": "I stayed up all night to see where the sun went...",
+            "punchline": "Then it dawned on me.",
+            "category": "puns"
+        },
+        {
+            "setup": "I’m reading a book on the history of glue...",
+            "punchline": "I just can’t seem to put it down.",
+            "category": "puns"
+        },
+        {
+            "setup": "I used to hate facial hair...",
+            "punchline": "But then it grew on me.",
+            "category": "puns"
+        },
+        {
+            "setup": "Why don’t eggs tell jokes?",
+            "punchline": "They’d crack each other up.",
+            "category": "puns"
+        },
+        {
+            "setup": "Why did the smartphone go to therapy?",
+            "punchline": "It lost its sense of touch.",
+            "category": "tech"
+        },
+        {
+            "setup": "Why was the computer cold?",
+            "punchline": "It left its Windows open.",
+            "category": "tech"
+        },
+        {
+            "setup": "Why did the computer break up with the internet?",
+            "punchline": "There was no connection.",
+            "category": "tech"
+        },
+        {
+            "setup": "What do you call an iPhone that isn't kidding around?",
+            "punchline": "Dead Siri-ous.",
+            "category": "tech"
+        },
+        {
+            "setup": "Why did the web developer leave the restaurant?",
+            "punchline": "Because of the table layout.",
+            "category": "tech"
+        },
+        {
+            "setup": "Why did the chicken go to the séance?",
+            "punchline": "To talk to the other side.",
+            "category": "general"
+        },
+        {
+            "setup": "What’s orange and sounds like a parrot?",
+            "punchline": "A carrot!",
+            "category": "puns"
+        },
+        {
+            "setup": "Why did the computer keep sneezing?",
+            "punchline": "It had a virus!",
+            "category": "tech"
+        },
+        {
+            "setup": "Why did the tomato turn red?",
+            "punchline": "Because it saw the salad dressing!",
+            "category": "general"
+        },
+        {
+            "setup": "Why was the equal sign so humble?",
+            "punchline": "Because it knew it wasn’t less than or greater than anyone else.",
+            "category": "math"
+        },
+        {
+            "setup": "What do you get when you cross a snowman and a dog?",
+            "punchline": "Frostbite!",
+            "category": "animal"
+        },
+        {
+            "setup": "How do you make holy water?",
+            "punchline": "You boil the hell out of it.",
+            "category": "dad"
+        },
+        {
+            "setup": "Why was the JavaScript developer sad?",
+            "punchline": "Because he didn't Node how to Express himself.",
+            "category": "programming"
+        },
+        {
+            "setup": "Knock knock. Who's there? Dishes.",
+            "punchline": "Dishes the police, open up!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Why don’t oysters share their pearls?",
+            "punchline": "Because they’re shellfish.",
+            "category": "animal"
+        },
+        {
+            "setup": "Why did the function return early?",
+            "punchline": "Because it had nothing else to declare.",
+            "category": "programming"
+        },
+        {
+            "setup": "How does a penguin build its house?",
+            "punchline": "Igloos it together.",
+            "category": "animal"
+        },
+        {
+            "setup": "Why did the bicycle fall over?",
+            "punchline": "It was two-tired.",
+            "category": "dad"
+        },
+        {
+            "setup": "Knock knock. Who's there? Etch.",
+            "punchline": "Bless you!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "What do you get if you divide the circumference of a pumpkin by its diameter?",
+            "punchline": "Pumpkin Pi.",
+            "category": "math"
+        },
+        {
+            "setup": "What did the left eye say to the right eye?",
+            "punchline": "Between you and me, something smells.",
+            "category": "general"
+        },
+        {
+            "setup": "What kind of music do mummies listen to?",
+            "punchline": "Wrap music.",
+            "category": "puns"
+        },
+        {
+            "setup": "Why did the programmer bring a ladder to work?",
+            "punchline": "Because they were going to a higher-level language.",
+            "category": "programming"
+        },
+        {
+            "setup": "Why did the cookie cry?",
+            "punchline": "Because its mother was a wafer too long.",
+            "category": "puns"
+        },
+        {
+            "setup": "Why can’t you trust math teachers with graph paper?",
+            "punchline": "They’re always plotting something.",
+            "category": "math"
+        },
+        {
+            "setup": "What do you call a dinosaur with an extensive vocabulary?",
+            "punchline": "A thesaurus.",
+            "category": "general"
+        },
+        {
+            "setup": "Why did the computer go to art school?",
+            "punchline": "To improve its bitmap skills.",
+            "category": "tech"
+        },
+        {
+            "setup": "What do you call an alligator in a vest?",
+            "punchline": "An investigator.",
+            "category": "animal"
+        },
+        {
+            "setup": "Why did the dad bring a ladder to the bar?",
+            "punchline": "He heard the drinks were on the house.",
+            "category": "dad"
+        },
+        {
+            "setup": "Knock knock. Who’s there? Alpaca.",
+            "punchline": "Alpaca the suitcase, you load up the car!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Why don’t ants get sick?",
+            "punchline": "They have tiny ant-bodies.",
+            "category": "animal"
+        },
+        {
+            "setup": "How do you drown a hipster?",
+            "punchline": "In the mainstream.",
+            "category": "puns"
+        },
+        {
+            "setup": "Why did the integer drown?",
+            "punchline": "Because it couldn’t float.",
+            "category": "math"
+        },
+        {
+            "setup": "What do you call a group of musical whales?",
+            "punchline": "An orca-stra.",
+            "category": "animal"
+        },
+        {
+            "setup": "Why was the iPhone so dramatic?",
+            "punchline": "Because it lost all its contacts!",
+            "category": "tech"
+        },
+        {
+            "setup": "Why was the broom late?",
+            "punchline": "It swept in.",
+            "category": "general"
+        },
+        {
+            "setup": "Why did the dad sit on the remote?",
+            "punchline": "Because he wanted to control the TV.",
+            "category": "dad"
+        },
+        {
+            "setup": "What did one keyboard say to the other?",
+            "punchline": "You’re my type.",
+            "category": "tech"
+        },
+        {
+            "setup": "Why was math class so long?",
+            "punchline": "The teacher kept going off on a tangent.",
+            "category": "math"
+        },
+        {
+            "setup": "Why was the cat sitting on the computer?",
+            "punchline": "It wanted to keep an eye on the mouse.",
+            "category": "animal"
+        },
+        {
+            "setup": "Why do cows wear bells?",
+            "punchline": "Because their horns don’t work.",
+            "category": "animal"
+        },
+        {
+            "setup": "Why was the skeleton afraid of the storm?",
+            "punchline": "He didn’t have the guts to weather it.",
+            "category": "dad"
+        },
+        {
+            "setup": "How does a tech guy fix a broken pizza?",
+            "punchline": "With a slice of code.",
+            "category": "tech"
+        },
+        {
+            "setup": "Why are elevator jokes so good?",
+            "punchline": "They work on many levels.",
+            "category": "puns"
+        },
+        {
+            "setup": "Why don’t calculators make good friends?",
+            "punchline": "They’re always acting calculating.",
+            "category": "math"
+        },
+        {
+            "setup": "What kind of fish knows how to program?",
+            "punchline": "A cod-er.",
+            "category": "programming"
+        },
+        {
+            "setup": "Knock knock. Who’s there? Cows go.",
+            "punchline": "Cows go who? No, cows go moo!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Why did the coffee file a police report?",
+            "punchline": "It got mugged.",
+            "category": "general"
+        },
+        {
+            "setup": "Why did the dad bring string to the bar?",
+            "punchline": "To tie one on.",
+            "category": "dad"
+        },
+        {
+            "setup": "Why don’t robots panic?",
+            "punchline": "They have nerves of steel.",
+            "category": "tech"
+        },
+        {
+            "setup": "Why was the circle so hot?",
+            "punchline": "Because it was 360 degrees!",
+            "category": "math"
+        },
+        {
+            "setup": "What’s a cat’s favorite color?",
+            "punchline": "Purr-ple.",
+            "category": "animal"
+        },
+        {
+            "setup": "What did the janitor say when he jumped out of the closet?",
+            "punchline": "Supplies!",
+            "category": "general"
+        },
+        {
+            "setup": "How do cows stay up to date with current events?",
+            "punchline": "They read the moos-paper.",
+            "category": "animal"
+        },
+        {
+            "setup": "Why did the developer go broke?",
+            "punchline": "Because he used up all his cache.",
+            "category": "programming"
+        },
+        {
+            "setup": "Why don't some couples go to the gym?",
+            "punchline": "Because some relationships don't work out.",
+            "category": "puns"
+        },
+        {
+            "setup": "What do you call a fish that practices medicine?",
+            "punchline": "A sturgeon.",
+            "category": "animal"
+        },
+        {
+            "setup": "How do you comfort a JavaScript bug?",
+            "punchline": "You console it.",
+            "category": "programming"
+        },
+        {
+            "setup": "Knock knock. Who’s there? Ice cream.",
+            "punchline": "Ice cream who? Ice cream every time I see a scary movie!",
+            "category": "knock-knock"
+        },
+        {
+            "setup": "Why don’t skeletons ever go trick or treating?",
+            "punchline": "Because they have no body to go with.",
+            "category": "dad"
+        },
+        {
+            "setup": "Why did the integer get promoted?",
+            "punchline": "Because it had great value!",
+            "category": "math"
+        },
+        {
+            "setup": "Why was the computer tired when it got home?",
+            "punchline": "It had too many tabs open.",
+            "category": "tech"
+        }
+    ]
+}
