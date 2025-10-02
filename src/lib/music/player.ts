@@ -1,66 +1,81 @@
+import { Client } from 'discord.js';
 import { Player } from 'discord-player';
 import { YoutubeiExtractor } from 'discord-player-youtubei';
 import { SpotifyExtractor } from '@discord-player/extractor';
-import { client } from './client';
+import { client } from '../client';
+import { Logger } from '../utils/logger';
 
+// Track loading states
 const loadingStates = new Map<string, boolean>();
 
-export const player = new Player(client, {
-    skipFFmpeg: true
-});
+// Initialize the player
+let player: Player;
 
-console.log('🎵 Initializing Discord Player...');
+try {
+    player = new Player(client);
+    player.extractors.loadDefault();
+    Logger.success('🎵 Discord Player initialized successfully');
+} catch (error) {
+    Logger.error('Failed to initialize Discord Player:', error);
+    throw error;
+}
 
+// Register YouTube extractor
 player.extractors.register(YoutubeiExtractor, {
     streamOptions: {
         highWaterMark: 1 << 25,
         useClient: 'TV'
     }
 }).then(() => {
-    console.log('✅ YouTubei extractor registered successfully');
+    Logger.success('YouTubei extractor registered successfully');
 }).catch(error => {
-    console.error('❌ Failed to register YouTubei extractor:', error);
+    Logger.error('Failed to register YouTubei extractor:', error);
 });
 
+// Register Spotify extractor
 player.extractors.register(SpotifyExtractor, {
     clientId: process.env.SPOTIFY_CLIENT_ID,
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET
 }).then(() => {
-    console.log('✅ Spotify extractor registered successfully');
+    Logger.success('Spotify extractor registered successfully');
 }).catch(error => {
-    console.error('❌ Failed to register Spotify extractor:', error);
+    Logger.error('Failed to register Spotify extractor:', error);
 });
 
+// Helper function to set loading state
 function setLoadingState(guildId: string, loading: boolean) {
     loadingStates.set(guildId, loading);
     if (loading) {
+        // Clear loading state after 10 seconds
         setTimeout(() => {
             loadingStates.delete(guildId);
         }, 10000);
     }
 }
 
+// Helper function to check loading state
 export function isGuildLoading(guildId: string): boolean {
     return loadingStates.get(guildId) || false;
 }
 
-
+// Add debug event listeners
 player.events.on('debug', (queue, message) => {
     if (message.includes('buffer') || message.includes('stream') || message.includes('timeout') || message.includes('download') || message.includes('error')) {
-        console.log(`🔍 Player debug: ${message}`);
+        Logger.debug(`Player debug: ${message}`);
     }
 });
 
 player.events.on('error', (queue, error) => {
-    console.error('❌ Player error:', error);
+    Logger.error('Player error:', error);
     if (queue) {
         setLoadingState(queue.guild.id, false);
     }
 });
 
 player.events.on('playerStart', (queue, track) => {
-    console.log(`🎵 Started playing: ${track.title}`);
-    console.log('Track metadata:', {
+    queue.metadata.channel.send(`🎵 Now playing: **${track.title}**`);
+    Logger.info(`Started playing: ${track.title}`);
+    Logger.debug('Track metadata:', {
         title: track.title,
         thumbnail: track.thumbnail,
         author: track.author,
@@ -76,7 +91,7 @@ player.events.on('playerStart', (queue, track) => {
 });
 
 player.events.on('playerFinish', (queue, track) => {
-    console.log(`✅ Finished playing: ${track.title}`);
+    Logger.success(`Finished playing: ${track.title}`);
     setLoadingState(queue.guild.id, false);
     // Reset bot status when no song is playing
     if (!queue.currentTrack) {
@@ -88,12 +103,12 @@ player.events.on('playerFinish', (queue, track) => {
 });
 
 player.events.on('playerSkip', (queue, track) => {
-    console.log(`⏭️ Skipped track: ${track.title}`);
+    Logger.info(`Skipped track: ${track.title}`);
     setLoadingState(queue.guild.id, true);
 });
 
 player.events.on('playerPause', (queue) => {
-    console.log('⏸️ Player paused');
+    Logger.info('Player paused');
     setLoadingState(queue.guild.id, false);
     // Update bot status when paused
     client.user?.setActivity({
@@ -103,7 +118,7 @@ player.events.on('playerPause', (queue) => {
 });
 
 player.events.on('playerResume', (queue) => {
-    console.log('▶️ Player resumed');
+    Logger.info('Player resumed');
     setLoadingState(queue.guild.id, false);
     // Update bot status with current song
     if (queue.currentTrack) {
@@ -115,12 +130,12 @@ player.events.on('playerResume', (queue) => {
 });
 
 player.events.on('connection', (queue) => {
-    console.log('🔊 Connected to voice channel');
+    Logger.info('Connected to voice channel');
     setLoadingState(queue.guild.id, false);
 });
 
 player.events.on('disconnect', (queue) => {
-    console.log('🔇 Disconnected from voice channel');
+    queue.metadata.channel.send('👋 Disconnected from voice channel');
     setLoadingState(queue.guild.id, false);
     // Reset bot status when disconnected
     client.user?.setActivity({
@@ -130,8 +145,8 @@ player.events.on('disconnect', (queue) => {
 });
 
 player.events.on('audioTrackAdd', (queue, track) => {
-    console.log(`➕ Track added to queue: ${track.title}`);
-    console.log('Track metadata:', {
+    Logger.info(`Track added to queue: ${track.title}`);
+    Logger.debug('Track metadata:', {
         title: track.title,
         thumbnail: track.thumbnail,
         author: track.author,
@@ -141,13 +156,13 @@ player.events.on('audioTrackAdd', (queue, track) => {
 });
 
 player.events.on('audioTrackRemove', (queue, track) => {
-    console.log(`➖ Track removed from queue: ${track.title}`);
+    Logger.info(`Track removed from queue: ${track.title}`);
 });
 
 player.events.on('audioTracksAdd', (queue, tracks) => {
-    console.log(`➕ ${tracks.length} tracks added to queue`);
+    Logger.info(`${tracks.length} tracks added to queue`);
     tracks.forEach(track => {
-        console.log('Track metadata:', {
+        Logger.debug('Track metadata:', {
             title: track.title,
             author: track.author,
             url: track.url,
@@ -157,6 +172,13 @@ player.events.on('audioTracksAdd', (queue, tracks) => {
 });
 
 player.events.on('playerError', (queue, error) => {
-    console.error('❌ Player error:', error);
+    Logger.error('Player error:', error);
+    queue.metadata.channel.send('❌ An error occurred while playing!');
     queue.metadata.channel.send(`❌ Player error: ${error.message}`);
 });
+
+player.events.on('emptyQueue', (queue) => {
+    queue.metadata.channel.send('✅ Queue finished!');
+});
+
+export { player };

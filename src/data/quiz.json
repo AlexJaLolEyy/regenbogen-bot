@@ -1,0 +1,2440 @@
+{
+    "questions": [
+        {
+            "question": "What is 2 + 2?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "correctAnswer": 1,
+            "category": "math",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What color are bananas?",
+            "options": [
+                "Red",
+                "Green",
+                "Yellow",
+                "Blue"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the capital of France?",
+            "options": [
+                "London",
+                "Berlin",
+                "Paris",
+                "Madrid"
+            ],
+            "correctAnswer": 2,
+            "category": "geography",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What does a thermometer measure?",
+            "options": [
+                "Speed",
+                "Temperature",
+                "Height",
+                "Weight"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": [
+                "Venus",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What do bees produce?",
+            "options": [
+                "Milk",
+                "Honey",
+                "Wax",
+                "Silk"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many continents are there on Earth?",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is H2O commonly known as?",
+            "options": [
+                "Oxygen",
+                "Salt",
+                "Hydrogen",
+                "Water"
+            ],
+            "correctAnswer": 3,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which shape has three sides?",
+            "options": [
+                "Circle",
+                "Triangle",
+                "Square",
+                "Rectangle"
+            ],
+            "correctAnswer": 1,
+            "category": "math",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which season comes after winter?",
+            "options": [
+                "Summer",
+                "Autumn",
+                "Spring",
+                "Fall"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many hours are in a day?",
+            "options": [
+                "12",
+                "24",
+                "48",
+                "36"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What gas do plants breathe in?",
+            "options": [
+                "Oxygen",
+                "Carbon Dioxide",
+                "Hydrogen",
+                "Nitrogen"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the opposite of 'hot'?",
+            "options": [
+                "Warm",
+                "Cold",
+                "Cool",
+                "Lukewarm"
+            ],
+            "correctAnswer": 1,
+            "category": "language",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which country is famous for pizza?",
+            "options": [
+                "France",
+                "Spain",
+                "Italy",
+                "USA"
+            ],
+            "correctAnswer": 2,
+            "category": "geography",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What number comes after 99?",
+            "options": [
+                "100",
+                "101",
+                "98",
+                "97"
+            ],
+            "correctAnswer": 0,
+            "category": "math",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is a baby dog called?",
+            "options": [
+                "Calf",
+                "Cub",
+                "Puppy",
+                "Kitten"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which instrument has black and white keys?",
+            "options": [
+                "Guitar",
+                "Flute",
+                "Piano",
+                "Drums"
+            ],
+            "correctAnswer": 2,
+            "category": "entertainment",
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many letters are in the English alphabet?",
+            "options": [
+                "24",
+                "25",
+                "26",
+                "27"
+            ],
+            "correctAnswer": 2,
+            "category": "language",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the main language spoken in Germany?",
+            "options": [
+                "English",
+                "Dutch",
+                "German",
+                "French"
+            ],
+            "correctAnswer": 2,
+            "category": "language",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is 10 divided by 2?",
+            "options": [
+                "4",
+                "5",
+                "6",
+                "2"
+            ],
+            "correctAnswer": 1,
+            "category": "math",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What color is the sun?",
+            "options": [
+                "Yellow",
+                "Red",
+                "Blue",
+                "White"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which is the smallest continent?",
+            "options": [
+                "Europe",
+                "Australia",
+                "Antarctica",
+                "Asia"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which day comes after Friday?",
+            "options": [
+                "Thursday",
+                "Saturday",
+                "Sunday",
+                "Monday"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What do cows drink?",
+            "options": [
+                "Milk",
+                "Water",
+                "Juice",
+                "Soda"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which planet do we live on?",
+            "options": [
+                "Mars",
+                "Venus",
+                "Earth",
+                "Jupiter"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Who wrote 'Romeo and Juliet'?",
+            "options": [
+                "Charles Dickens",
+                "William Shakespeare",
+                "Mark Twain",
+                "Jane Austen"
+            ],
+            "correctAnswer": 1,
+            "category": "literature",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which device is used to call someone?",
+            "options": [
+                "Television",
+                "Phone",
+                "Laptop",
+                "Microwave"
+            ],
+            "correctAnswer": 1,
+            "category": "technology",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the plural of 'mouse'?",
+            "options": [
+                "Mice",
+                "Mouses",
+                "Mices",
+                "Mouse"
+            ],
+            "correctAnswer": 0,
+            "category": "language",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What do we use to brush our teeth?",
+            "options": [
+                "Comb",
+                "Spoon",
+                "Toothbrush",
+                "Fork"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which month comes after June?",
+            "options": [
+                "May",
+                "July",
+                "August",
+                "April"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What shape is a basketball?",
+            "options": [
+                "Square",
+                "Circle",
+                "Sphere",
+                "Cube"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which animal barks?",
+            "options": [
+                "Cat",
+                "Dog",
+                "Cow",
+                "Sheep"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is 5 x 5?",
+            "options": [
+                "20",
+                "25",
+                "30",
+                "15"
+            ],
+            "correctAnswer": 1,
+            "category": "math",
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many fingers do humans usually have?",
+            "options": [
+                "8",
+                "9",
+                "10",
+                "12"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which fruit is red and has seeds on the outside?",
+            "options": [
+                "Banana",
+                "Strawberry",
+                "Apple",
+                "Grape"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many wheels does a bicycle have?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What does a clock measure?",
+            "options": [
+                "Weight",
+                "Temperature",
+                "Time",
+                "Speed"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What animal is known for its long neck?",
+            "options": [
+                "Elephant",
+                "Zebra",
+                "Giraffe",
+                "Horse"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which sense is associated with the nose?",
+            "options": [
+                "Taste",
+                "Smell",
+                "Sight",
+                "Touch"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which direction does the sun rise from?",
+            "options": [
+                "North",
+                "South",
+                "East",
+                "West"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What color is the sky on a clear day?",
+            "options": [
+                "Blue",
+                "Green",
+                "Red",
+                "Purple"
+            ],
+            "correctAnswer": 0,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the opposite of 'up'?",
+            "options": [
+                "Left",
+                "Right",
+                "Down",
+                "Over"
+            ],
+            "correctAnswer": 2,
+            "category": "language",
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many legs does an insect have?",
+            "options": [
+                "4",
+                "6",
+                "8",
+                "10"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What do chickens lay?",
+            "options": [
+                "Milk",
+                "Eggs",
+                "Wool",
+                "Feathers"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which is faster: car or bicycle?",
+            "options": [
+                "Bicycle",
+                "Car",
+                "Both same",
+                "Train"
+            ],
+            "correctAnswer": 1,
+            "category": "technology",
+            "difficulty": "easy"
+        },
+        {
+            "question": "How many days are in a week?",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What color is grass?",
+            "options": [
+                "Blue",
+                "Green",
+                "Yellow",
+                "Red"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What animal is known for its black and white stripes?",
+            "options": [
+                "Tiger",
+                "Zebra",
+                "Panda",
+                "Skunk"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which tool is used to cut paper?",
+            "options": [
+                "Pen",
+                "Knife",
+                "Scissors",
+                "Spoon"
+            ],
+            "correctAnswer": 2,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What do we wear on our feet?",
+            "options": [
+                "Gloves",
+                "Shoes",
+                "Hats",
+                "Shirts"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "easy"
+        },
+        {
+            "question": "Which holiday involves presents and Santa Claus?",
+            "options": [
+                "Easter",
+                "Halloween",
+                "Christmas",
+                "Thanksgiving"
+            ],
+            "correctAnswer": 2,
+            "category": "entertainment",
+            "difficulty": "easy"
+        },
+        {
+            "question": "What is the capital of Australia?",
+            "options": [
+                "Sydney",
+                "Melbourne",
+                "Canberra",
+                "Brisbane"
+            ],
+            "correctAnswer": 2,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Who developed the theory of relativity?",
+            "options": [
+                "Isaac Newton",
+                "Albert Einstein",
+                "Marie Curie",
+                "Nikola Tesla"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which ocean is the largest in the world?",
+            "options": [
+                "Atlantic Ocean",
+                "Indian Ocean",
+                "Arctic Ocean",
+                "Pacific Ocean"
+            ],
+            "correctAnswer": 3,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which element has the chemical symbol 'O'?",
+            "options": [
+                "Oxygen",
+                "Gold",
+                "Iron",
+                "Silver"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Who wrote the play 'Hamlet'?",
+            "options": [
+                "William Shakespeare",
+                "Charles Dickens",
+                "Oscar Wilde",
+                "George Orwell"
+            ],
+            "correctAnswer": 0,
+            "category": "literature",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the fastest land animal?",
+            "options": [
+                "Cheetah",
+                "Lion",
+                "Elephant",
+                "Horse"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the longest river in the world?",
+            "options": [
+                "Amazon River",
+                "Nile River",
+                "Yangtze River",
+                "Mississippi River"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What year did the Titanic sink?",
+            "options": [
+                "1910",
+                "1912",
+                "1905",
+                "1898"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which is the tallest mountain in the world?",
+            "options": [
+                "Mount Kilimanjaro",
+                "Mount Everest",
+                "Mount Fuji",
+                "K2"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Who was the first man to walk on the Moon?",
+            "options": [
+                "Neil Armstrong",
+                "Buzz Aldrin",
+                "Yuri Gagarin",
+                "Michael Collins"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which country is famous for sushi?",
+            "options": [
+                "China",
+                "Japan",
+                "Thailand",
+                "India"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the chemical symbol for water?",
+            "options": [
+                "CO2",
+                "H2O",
+                "O2",
+                "CH4"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Who invented the light bulb?",
+            "options": [
+                "Alexander Graham Bell",
+                "Nikola Tesla",
+                "Thomas Edison",
+                "James Watt"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the smallest country in the world?",
+            "options": [
+                "Monaco",
+                "Vatican City",
+                "San Marino",
+                "Liechtenstein"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which is the longest-running TV show?",
+            "options": [
+                "The Simpsons",
+                "Friends",
+                "The Office",
+                "The Big Bang Theory"
+            ],
+            "correctAnswer": 0,
+            "category": "entertainment",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the largest planet in our solar system?",
+            "options": [
+                "Earth",
+                "Jupiter",
+                "Saturn",
+                "Neptune"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which animal is the largest mammal?",
+            "options": [
+                "Blue Whale",
+                "Elephant",
+                "Shark",
+                "Giraffe"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Who was the first President of the United States?",
+            "options": [
+                "Abraham Lincoln",
+                "George Washington",
+                "Thomas Jefferson",
+                "John Adams"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What does the word 'photosynthesis' refer to?",
+            "options": [
+                "Plant growth",
+                "Oxygen production in plants",
+                "The process of digestion in plants",
+                "Plant respiration"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the main ingredient in guacamole?",
+            "options": [
+                "Tomato",
+                "Avocado",
+                "Onion",
+                "Garlic"
+            ],
+            "correctAnswer": 1,
+            "category": "general",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which country is home to the Great Barrier Reef?",
+            "options": [
+                "USA",
+                "Australia",
+                "Mexico",
+                "South Africa"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What type of animal is a Komodo dragon?",
+            "options": [
+                "Reptile",
+                "Mammal",
+                "Bird",
+                "Fish"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which is the capital of Canada?",
+            "options": [
+                "Toronto",
+                "Ottawa",
+                "Vancouver",
+                "Montreal"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What year did World War II end?",
+            "options": [
+                "1943",
+                "1945",
+                "1947",
+                "1950"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the tallest building in the world?",
+            "options": [
+                "Empire State Building",
+                "Burj Khalifa",
+                "Eiffel Tower",
+                "One World Trade Center"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which fruit is known for having a tough, spiky exterior?",
+            "options": [
+                "Pineapple",
+                "Banana",
+                "Apple",
+                "Mango"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "In which continent is the Amazon rainforest located?",
+            "options": [
+                "Asia",
+                "Africa",
+                "South America",
+                "Australia"
+            ],
+            "correctAnswer": 2,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which famous artist painted the 'Starry Night'?",
+            "options": [
+                "Leonardo da Vinci",
+                "Claude Monet",
+                "Vincent van Gogh",
+                "Pablo Picasso"
+            ],
+            "correctAnswer": 2,
+            "category": "art",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the freezing point of water in Celsius?",
+            "options": [
+                "0°C",
+                "100°C",
+                "32°F",
+                "212°F"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which city is known as the 'Big Apple'?",
+            "options": [
+                "Los Angeles",
+                "Chicago",
+                "New York",
+                "San Francisco"
+            ],
+            "correctAnswer": 2,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Who is the author of 'Harry Potter'?",
+            "options": [
+                "J.R.R. Tolkien",
+                "J.K. Rowling",
+                "George R.R. Martin",
+                "C.S. Lewis"
+            ],
+            "correctAnswer": 1,
+            "category": "literature",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which famous landmark is located in Paris, France?",
+            "options": [
+                "Eiffel Tower",
+                "Big Ben",
+                "Colosseum",
+                "Statue of Liberty"
+            ],
+            "correctAnswer": 0,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Who painted the 'Mona Lisa'?",
+            "options": [
+                "Pablo Picasso",
+                "Vincent van Gogh",
+                "Leonardo da Vinci",
+                "Michelangelo"
+            ],
+            "correctAnswer": 2,
+            "category": "art",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the largest continent?",
+            "options": [
+                "Africa",
+                "Asia",
+                "Europe",
+                "America"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which country is known for its pyramids?",
+            "options": [
+                "Mexico",
+                "Egypt",
+                "Italy",
+                "Greece"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the name of the longest mountain range in the world?",
+            "options": [
+                "Andes",
+                "Rockies",
+                "Himalayas",
+                "Alps"
+            ],
+            "correctAnswer": 0,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which chemical element has the symbol 'Fe'?",
+            "options": [
+                "Iron",
+                "Copper",
+                "Silver",
+                "Gold"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which planet is closest to the Sun?",
+            "options": [
+                "Earth",
+                "Mars",
+                "Venus",
+                "Mercury"
+            ],
+            "correctAnswer": 3,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which country is famous for tulips?",
+            "options": [
+                "Belgium",
+                "Netherlands",
+                "France",
+                "Germany"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the longest river in the United States?",
+            "options": [
+                "Missouri River",
+                "Mississippi River",
+                "Colorado River",
+                "Rio Grande"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the capital of Japan?",
+            "options": [
+                "Beijing",
+                "Seoul",
+                "Tokyo",
+                "Hong Kong"
+            ],
+            "correctAnswer": 2,
+            "category": "geography",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which metal is liquid at room temperature?",
+            "options": [
+                "Iron",
+                "Mercury",
+                "Gold",
+                "Copper"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the square root of 64?",
+            "options": [
+                "8",
+                "16",
+                "4",
+                "2"
+            ],
+            "correctAnswer": 0,
+            "category": "math",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Who wrote 'Pride and Prejudice'?",
+            "options": [
+                "Jane Austen",
+                "Emily Brontë",
+                "Charlotte Brontë",
+                "Charles Dickens"
+            ],
+            "correctAnswer": 0,
+            "category": "literature",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which bird is known for its ability to mimic human speech?",
+            "options": [
+                "Parrot",
+                "Crow",
+                "Eagle",
+                "Owl"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which city hosted the 2016 Summer Olympics?",
+            "options": [
+                "Beijing",
+                "Rio de Janeiro",
+                "London",
+                "Tokyo"
+            ],
+            "correctAnswer": 1,
+            "category": "sports",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the hardest natural substance on Earth?",
+            "options": [
+                "Gold",
+                "Diamond",
+                "Iron",
+                "Platinum"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which famous scientist developed the laws of motion and gravity?",
+            "options": [
+                "Albert Einstein",
+                "Isaac Newton",
+                "Marie Curie",
+                "Galileo Galilei"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which planet is known for its rings?",
+            "options": [
+                "Mars",
+                "Saturn",
+                "Venus",
+                "Jupiter"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "medium"
+        },
+        {
+            "question": "Which country invented paper?",
+            "options": [
+                "China",
+                "Greece",
+                "Egypt",
+                "Rome"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "medium"
+        },
+        {
+            "question": "What is the capital city of Mongolia?",
+            "options": [
+                "Ulaanbaatar",
+                "Astana",
+                "Baku",
+                "Tashkent"
+            ],
+            "correctAnswer": 0,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the largest desert in the world?",
+            "options": [
+                "Sahara Desert",
+                "Gobi Desert",
+                "Karakum Desert",
+                "Antarctic Desert"
+            ],
+            "correctAnswer": 3,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the hardest known substance in the universe?",
+            "options": [
+                "Diamond",
+                "Graphene",
+                "Neutron star material",
+                "Platinum"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who developed the concept of quantum mechanics?",
+            "options": [
+                "Albert Einstein",
+                "Niels Bohr",
+                "Erwin Schrödinger",
+                "Max Planck"
+            ],
+            "correctAnswer": 3,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What element has the highest atomic number?",
+            "options": [
+                "Uranium",
+                "Plutonium",
+                "Oganesson",
+                "Neptunium"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "In what year did the Chernobyl disaster occur?",
+            "options": [
+                "1986",
+                "1990",
+                "1979",
+                "1983"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which element is the rarest on Earth?",
+            "options": [
+                "Astatine",
+                "Francium",
+                "Oganesson",
+                "Radon"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the longest-running Broadway musical?",
+            "options": [
+                "Les Misérables",
+                "The Phantom of the Opera",
+                "Cats",
+                "Wicked"
+            ],
+            "correctAnswer": 1,
+            "category": "entertainment",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which sea is the largest in the world?",
+            "options": [
+                "Caribbean Sea",
+                "Mediterranean Sea",
+                "South China Sea",
+                "Caspian Sea"
+            ],
+            "correctAnswer": 3,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the capital of Bhutan?",
+            "options": [
+                "Kathmandu",
+                "Thimphu",
+                "Colombo",
+                "Male"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "In what year did the first human reach the South Pole?",
+            "options": [
+                "1911",
+                "1908",
+                "1921",
+                "1934"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which country has won the most FIFA World Cup titles?",
+            "options": [
+                "Germany",
+                "Argentina",
+                "Brazil",
+                "Italy"
+            ],
+            "correctAnswer": 2,
+            "category": "sports",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which element is commonly used to make semiconductors?",
+            "options": [
+                "Silicon",
+                "Germanium",
+                "Sodium",
+                "Iron"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who was the first woman to win a Nobel Prize?",
+            "options": [
+                "Marie Curie",
+                "Rosalind Franklin",
+                "Dorothy Crowfoot Hodgkin",
+                "Lise Meitner"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which country was the first to land a man on the Moon?",
+            "options": [
+                "USA",
+                "Soviet Union",
+                "China",
+                "India"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who was the first emperor of China?",
+            "options": [
+                "Qin Shi Huang",
+                "Wudi",
+                "Han Gaozu",
+                "Tang Taizong"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the second most abundant element in Earth's crust?",
+            "options": [
+                "Oxygen",
+                "Silicon",
+                "Aluminum",
+                "Iron"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the smallest bone in the human body?",
+            "options": [
+                "Stapes",
+                "Malleus",
+                "Incus",
+                "Fibula"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which company developed the first personal computer?",
+            "options": [
+                "Apple",
+                "IBM",
+                "Compaq",
+                "Microsoft"
+            ],
+            "correctAnswer": 1,
+            "category": "tech",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the capital of Kazakhstan?",
+            "options": [
+                "Astana",
+                "Bishkek",
+                "Almaty",
+                "Tashkent"
+            ],
+            "correctAnswer": 0,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which country is the world's largest producer of coffee?",
+            "options": [
+                "Vietnam",
+                "Brazil",
+                "Colombia",
+                "Mexico"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who invented the first practical telephone?",
+            "options": [
+                "Nikola Tesla",
+                "Alexander Graham Bell",
+                "Thomas Edison",
+                "Guglielmo Marconi"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which philosopher is known for his theory of the 'categorical imperative'?",
+            "options": [
+                "Immanuel Kant",
+                "Friedrich Nietzsche",
+                "Jean-Paul Sartre",
+                "René Descartes"
+            ],
+            "correctAnswer": 0,
+            "category": "philosophy",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which planet is named after the Roman god of the sea?",
+            "options": [
+                "Venus",
+                "Mars",
+                "Neptune",
+                "Saturn"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which is the smallest planet in our solar system?",
+            "options": [
+                "Earth",
+                "Mercury",
+                "Mars",
+                "Venus"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the rarest blood type in the world?",
+            "options": [
+                "AB-",
+                "O-",
+                "A-",
+                "B-"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+            "options": [
+                "Amelia Earhart",
+                "Harriet Quimby",
+                "Bessie Coleman",
+                "Jacqueline Cochran"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the capital of Azerbaijan?",
+            "options": [
+                "Tbilisi",
+                "Baku",
+                "Yerevan",
+                "Astana"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the most common gas in the Earth's atmosphere?",
+            "options": [
+                "Oxygen",
+                "Nitrogen",
+                "Carbon dioxide",
+                "Argon"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the name of the longest river in Asia?",
+            "options": [
+                "Mekong River",
+                "Yangtze River",
+                "Indus River",
+                "Yellow River"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What was the first video game ever made?",
+            "options": [
+                "Space Invaders",
+                "Pong",
+                "Pac-Man",
+                "Tennis for Two"
+            ],
+            "correctAnswer": 3,
+            "category": "tech",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who was the first African-American President of the United States?",
+            "options": [
+                "Barack Obama",
+                "George Washington Carver",
+                "Martin Luther King Jr.",
+                "Frederick Douglass"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who was the first woman to win the Nobel Prize in Physics?",
+            "options": [
+                "Marie Curie",
+                "Lise Meitner",
+                "Rosalind Franklin",
+                "Dorothy Crowfoot Hodgkin"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which country is known for the invention of paper?",
+            "options": [
+                "China",
+                "Egypt",
+                "Greece",
+                "India"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which country is home to the most languages in the world?",
+            "options": [
+                "USA",
+                "China",
+                "Papua New Guinea",
+                "India"
+            ],
+            "correctAnswer": 2,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who is considered the father of modern physics?",
+            "options": [
+                "Isaac Newton",
+                "Albert Einstein",
+                "Niels Bohr",
+                "Galileo Galilei"
+            ],
+            "correctAnswer": 1,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which city was the first to be the capital of the United States?",
+            "options": [
+                "New York",
+                "Philadelphia",
+                "Washington, D.C.",
+                "Boston"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which ancient civilization built the pyramids in Egypt?",
+            "options": [
+                "Roman",
+                "Greek",
+                "Mayan",
+                "Egyptian"
+            ],
+            "correctAnswer": 3,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the chemical symbol for tungsten?",
+            "options": [
+                "W",
+                "Tg",
+                "Tu",
+                "Tw"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "In which year was the first iPhone released?",
+            "options": [
+                "2007",
+                "2008",
+                "2009",
+                "2010"
+            ],
+            "correctAnswer": 0,
+            "category": "tech",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the capital of Sri Lanka?",
+            "options": [
+                "Colombo",
+                "Male",
+                "Dhaka",
+                "Kuala Lumpur"
+            ],
+            "correctAnswer": 0,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the longest bone in the human body?",
+            "options": [
+                "Femur",
+                "Tibia",
+                "Humerus",
+                "Radius"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who is the founder of the company Tesla?",
+            "options": [
+                "Jeff Bezos",
+                "Elon Musk",
+                "Mark Zuckerberg",
+                "Bill Gates"
+            ],
+            "correctAnswer": 1,
+            "category": "tech",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which ancient city was destroyed by a volcanic eruption in 79 AD?",
+            "options": [
+                "Athens",
+                "Pompeii",
+                "Rome",
+                "Carthage"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who was the first African-American woman to win a Nobel Prize?",
+            "options": [
+                "Toni Morrison",
+                "Maya Angelou",
+                "Wangari Maathai",
+                "Alice Walker"
+            ],
+            "correctAnswer": 2,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which gas makes up most of the Earth's atmosphere?",
+            "options": [
+                "Oxygen",
+                "Carbon Dioxide",
+                "Nitrogen",
+                "Helium"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Who was the first person to reach the North Pole?",
+            "options": [
+                "Robert Peary",
+                "Matthew Henson",
+                "Ernest Shackleton",
+                "Roald Amundsen"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "hard"
+        },
+        {
+            "question": "Which company created the first mass-produced car?",
+            "options": [
+                "Ford",
+                "Tesla",
+                "General Motors",
+                "Chrysler"
+            ],
+            "correctAnswer": 0,
+            "category": "tech",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the capital of Mongolia?",
+            "options": [
+                "Ulaanbaatar",
+                "Astana",
+                "Baku",
+                "Tashkent"
+            ],
+            "correctAnswer": 0,
+            "category": "geography",
+            "difficulty": "hard"
+        },
+        {
+            "question": "What is the most stable isotope of hydrogen?",
+            "options": [
+                "Protium",
+                "Deuterium",
+                "Tritium",
+                "Quarkonium"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the capital of the Republic of the Congo?",
+            "options": [
+                "Kinshasa",
+                "Brazzaville",
+                "Banjul",
+                "Libreville"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which scientist proposed the theory of electromagnetism?",
+            "options": [
+                "Maxwell",
+                "Einstein",
+                "Faraday",
+                "Heisenberg"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What element has the atomic number 118?",
+            "options": [
+                "Oganesson",
+                "Uranium",
+                "Radon",
+                "Neptunium"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which ancient civilization developed the concept of zero?",
+            "options": [
+                "Babylonian",
+                "Egyptian",
+                "Mayan",
+                "Greek"
+            ],
+            "correctAnswer": 2,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who was the first person to formulate the laws of motion and universal gravitation?",
+            "options": [
+                "Isaac Newton",
+                "Galileo Galilei",
+                "Johannes Kepler",
+                "Albert Einstein"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which is the largest living organism on Earth?",
+            "options": [
+                "Great Barrier Reef",
+                "Blue Whale",
+                "Pando (Quaking Aspen)",
+                "Sequoia Trees"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the name of the first artificial satellite launched by the USSR?",
+            "options": [
+                "Sputnik 1",
+                "Venera 1",
+                "Luna 1",
+                "Soyuz 1"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which theory in physics describes the behavior of subatomic particles?",
+            "options": [
+                "Quantum Theory",
+                "String Theory",
+                "Relativity Theory",
+                "Theory of Evolution"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who was the first emperor of Rome?",
+            "options": [
+                "Julius Caesar",
+                "Augustus",
+                "Nero",
+                "Constantine"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the name of the longest river in the world?",
+            "options": [
+                "Amazon River",
+                "Yangtze River",
+                "Nile River",
+                "Mississippi River"
+            ],
+            "correctAnswer": 2,
+            "category": "geography",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "In what year did the first human land on the Moon?",
+            "options": [
+                "1969",
+                "1958",
+                "1971",
+                "1961"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the name of the only continent without a desert?",
+            "options": [
+                "Europe",
+                "Asia",
+                "Australia",
+                "North America"
+            ],
+            "correctAnswer": 0,
+            "category": "geography",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the chemical formula for the mineral known as 'salt' or sodium chloride?",
+            "options": [
+                "NaCl",
+                "H2O",
+                "CO2",
+                "KCl"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who is considered the father of modern philosophy?",
+            "options": [
+                "René Descartes",
+                "Immanuel Kant",
+                "Plato",
+                "Socrates"
+            ],
+            "correctAnswer": 0,
+            "category": "philosophy",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the name of the largest moon of Saturn?",
+            "options": [
+                "Titan",
+                "Rhea",
+                "Iapetus",
+                "Enceladus"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who discovered the structure of the DNA molecule?",
+            "options": [
+                "James Watson and Francis Crick",
+                "Rosalind Franklin",
+                "Marie Curie",
+                "Gregor Mendel"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which country was the first to give women the right to vote?",
+            "options": [
+                "United States",
+                "New Zealand",
+                "Finland",
+                "Australia"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which element has the atomic number 79?",
+            "options": [
+                "Gold",
+                "Silver",
+                "Platinum",
+                "Mercury"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who is known for developing the first practical telegraph?",
+            "options": [
+                "Samuel Morse",
+                "Nikola Tesla",
+                "Guglielmo Marconi",
+                "Alexander Graham Bell"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the rarest naturally occurring element on Earth?",
+            "options": [
+                "Astatine",
+                "Francium",
+                "Oganesson",
+                "Plutonium"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What ancient civilization built the city of Machu Picchu?",
+            "options": [
+                "Aztec",
+                "Maya",
+                "Inca",
+                "Olmec"
+            ],
+            "correctAnswer": 2,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the name of the first spacecraft to land on the surface of Mars?",
+            "options": [
+                "Viking 1",
+                "Curiosity",
+                "Sojourner",
+                "Perseverance"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the second most abundant element in the Earth’s crust?",
+            "options": [
+                "Silicon",
+                "Oxygen",
+                "Iron",
+                "Aluminum"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who was the first woman to win a Nobel Prize in Physics?",
+            "options": [
+                "Marie Curie",
+                "Dorothy Crowfoot Hodgkin",
+                "Lise Meitner",
+                "Rosalind Franklin"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who wrote the 'Divine Comedy'?",
+            "options": [
+                "Dante Alighieri",
+                "Homer",
+                "Virgil",
+                "Geoffrey Chaucer"
+            ],
+            "correctAnswer": 0,
+            "category": "literature",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What was the name of the first artificial Earth satellite?",
+            "options": [
+                "Luna 1",
+                "Sputnik 1",
+                "Explorer 1",
+                "Vanguard 1"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the hardest naturally occurring substance on Earth?",
+            "options": [
+                "Diamond",
+                "Graphene",
+                "Silicon",
+                "Corundum"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which philosopher is associated with the concept of 'the tabula rasa'?",
+            "options": [
+                "John Locke",
+                "Friedrich Nietzsche",
+                "Karl Marx",
+                "Aristotle"
+            ],
+            "correctAnswer": 0,
+            "category": "philosophy",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the capital of the Maldives?",
+            "options": [
+                "Male",
+                "Colombo",
+                "Dhaka",
+                "Singapore"
+            ],
+            "correctAnswer": 0,
+            "category": "geography",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the largest known star by volume?",
+            "options": [
+                "VY Canis Majoris",
+                "Betelgeuse",
+                "Antares",
+                "Sirius"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the most common type of cancer worldwide?",
+            "options": [
+                "Lung cancer",
+                "Breast cancer",
+                "Prostate cancer",
+                "Colorectal cancer"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who was the first emperor of China?",
+            "options": [
+                "Qin Shi Huang",
+                "Han Gaozu",
+                "Wudi",
+                "Zhao Kuangyin"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which country was the first to implement universal healthcare?",
+            "options": [
+                "France",
+                "Germany",
+                "United Kingdom",
+                "Sweden"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the name of the first black woman to be elected to the U.S. Congress?",
+            "options": [
+                "Shirley Chisholm",
+                "Barbara Jordan",
+                "Condoleezza Rice",
+                "Kamala Harris"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the largest planet in the solar system?",
+            "options": [
+                "Saturn",
+                "Earth",
+                "Uranus",
+                "Jupiter"
+            ],
+            "correctAnswer": 3,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What year was the United Nations established?",
+            "options": [
+                "1945",
+                "1939",
+                "1919",
+                "1950"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which country has the most UNESCO World Heritage Sites?",
+            "options": [
+                "Italy",
+                "China",
+                "India",
+                "Germany"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who invented the first practical microscope?",
+            "options": [
+                "Antonie van Leeuwenhoek",
+                "Robert Hooke",
+                "Galileo Galilei",
+                "Carl Zeiss"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which city was known as Byzantium before being renamed?",
+            "options": [
+                "Athens",
+                "Rome",
+                "Istanbul",
+                "Alexandria"
+            ],
+            "correctAnswer": 2,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which scientific principle states that the volume of a gas is inversely proportional to its pressure?",
+            "options": [
+                "Boyle's Law",
+                "Newton's Law",
+                "Charles's Law",
+                "Avogadro's Law"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+            "options": [
+                "Amelia Earhart",
+                "Harriet Quimby",
+                "Bessie Coleman",
+                "Jacqueline Cochran"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the capital of Mongolia?",
+            "options": [
+                "Astana",
+                "Ulaanbaatar",
+                "Almaty",
+                "Tashkent"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the only planet in the solar system that rotates on its side?",
+            "options": [
+                "Uranus",
+                "Neptune",
+                "Saturn",
+                "Mars"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What country was formerly known as Ceylon?",
+            "options": [
+                "India",
+                "Sri Lanka",
+                "Bangladesh",
+                "Pakistan"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who was the first person to receive two Nobel Prizes?",
+            "options": [
+                "Marie Curie",
+                "Linus Pauling",
+                "Albert Einstein",
+                "Frederick Sanger"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which country has the most official languages?",
+            "options": [
+                "India",
+                "South Africa",
+                "Switzerland",
+                "Belgium"
+            ],
+            "correctAnswer": 1,
+            "category": "geography",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the name of the first woman to fly solo around the world?",
+            "options": [
+                "Amelia Earhart",
+                "Jacqueline Cochran",
+                "Bessie Coleman",
+                "Valentina Tereshkova"
+            ],
+            "correctAnswer": 1,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the rarest blood type in the world?",
+            "options": [
+                "AB-",
+                "O-",
+                "A-",
+                "B-"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Which country was the first to land a human on the moon?",
+            "options": [
+                "USA",
+                "Soviet Union",
+                "China",
+                "India"
+            ],
+            "correctAnswer": 0,
+            "category": "history",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who developed the theory of general relativity?",
+            "options": [
+                "Isaac Newton",
+                "Niels Bohr",
+                "Albert Einstein",
+                "Erwin Schrödinger"
+            ],
+            "correctAnswer": 2,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "What is the longest bone in the human body?",
+            "options": [
+                "Femur",
+                "Tibia",
+                "Humerus",
+                "Radius"
+            ],
+            "correctAnswer": 0,
+            "category": "science",
+            "difficulty": "extreme"
+        },
+        {
+            "question": "Who was the first person to walk on the Moon?",
+            "options": [
+                "Buzz Aldrin",
+                "Michael Collins",
+                "Neil Armstrong",
+                "John Glenn"
+            ],
+            "correctAnswer": 2,
+            "category": "history",
+            "difficulty": "extreme"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 import { SlashCommandBuilder } from '@discordjs/builders';
 import { ChatInputCommandInteraction, EmbedBuilder } from 'discord.js';
 import { useMainPlayer } from 'discord-player';
-import { isGuildLoading } from '../lib/player';
+import { isGuildLoading } from '../../lib/music/player';
 
 export const data = new SlashCommandBuilder()
     .setName('skip')
